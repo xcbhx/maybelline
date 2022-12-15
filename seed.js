@@ -22,6 +22,14 @@ async function getItems(req, res, next) {
             })
         }
     }
+
+    // const categories = await Category.create([
+    //     apiId: categories.id,
+    //     name: categories.name,
+    //     product_type: categories.product_type,
+    //     sortOrder
+    // ]);
+    
     console.log('items');
 }
 
