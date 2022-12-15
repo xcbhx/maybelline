@@ -2,35 +2,25 @@ require('dotenv').config();
 require('./config/database');
 
 const fetch = require('node-fetch');
-// const Category = require('./models/category');
-const Item = require('./models/item');
+const Makeup = require('./models/makeup');
 
-async function getItems(req, res, next) {
+async function getMakeups(req, res, next) {
     const data = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`);
-    const itemData = await data.json();
-    for (item of itemData) {
-        const exists = await Item.exists({apiId:item.id})
+    const makeupData = await data.json();
+    for (makeup of makeupData) {
+        const exists = await makeup.exists({Id:makeup.id})
         if (!exists) {
-            await Item.create({
-                apiId: item.id,
-                name: item.name,
-                price: item.price,
-                image_link: item.image_link,
-                description: item.description,
-                rating: item.rating,
-                product_type: item.product_type
+            await Makeup.create({
+                Id: makeup.id,
+                name: makeup.name,
+                price: makeup.price,
+                image_link: makeup.image_link,
+                description: makeup.description,
+                rating: makeup.rating,
+                product_type: makeup.product_type
             })
         }
     }
-
-    // const categories = await Category.create([
-    //     apiId: categories.id,
-    //     name: categories.name,
-    //     product_type: categories.product_type,
-    //     sortOrder
-    // ]);
-    
-    console.log('items');
 }
 
-getItems();
+getMakeups();
