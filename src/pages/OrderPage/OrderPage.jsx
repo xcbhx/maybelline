@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import * as makeupAPI from '../../utilities/makeup-api';
+import * as ordersAPI from '../../utilities/orders-api';
 import './OrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import MenuList from '../../components/MenuList/MenuList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 
 export default function OrderPage({ user, setUser }) {
@@ -27,14 +29,14 @@ export default function OrderPage({ user, setUser }) {
     }, []);
     /*--- Event Handlers ---*/
     async function handleAddToOrder(makeupId) {
-        // 1. Call the addmakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
-        const updatedCart = await ordersAPI.addmakeupToCart(makeupId);
+        // 1. Call the addMakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
+        const updatedCart = await ordersAPI.addMakeupToCart(makeupId);
         // 2. Update the cart state with the updated cart received from the server
         setCart(updatedCart);
     }
 
     async function handleChangeQty(makeupId, newQty) {
-        const updatedCart = await ordersAPI.setmakeupQtyInCart(makeupId, newQty);
+        const updatedCart = await ordersAPI.setMakeupQtyInCart(makeupId, newQty);
         setCart(updatedCart);
     }
 
@@ -51,7 +53,7 @@ export default function OrderPage({ user, setUser }) {
                 <UserLogOut user={user} setUser={setUser} />
             </aside>
             <MenuList
-                makeupItems={makeupItems}
+                // makeupItems={makeupItems}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail

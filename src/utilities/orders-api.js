@@ -16,7 +16,7 @@ export function addMakeupToCart(makeupId) {
 // Update the makeup's qty in the cart
 // Will add the makeup to the order if not currently in the cart
 // Sending info via the data payload instead of a long URL
-export function setmakeupQtyInCart(makeupId, newQty) {
+export function setMakeupQtyInCart(makeupId, newQty) {
   return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { makeupId, newQty });
 }
 
