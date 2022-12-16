@@ -3,6 +3,7 @@ import * as makeupAPI from '../../utilities/makeup-api';
 import './OrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import MenuList from '../../components/MenuList/MenuList';
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
 
 export default function OrderPage({ user, setUser }) {
@@ -24,12 +25,40 @@ export default function OrderPage({ user, setUser }) {
         }
         getCart();
     }, []);
+    /*--- Event Handlers ---*/
+    async function handleAddToOrder(makeupId) {
+        // 1. Call the addmakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
+        const updatedCart = await ordersAPI.addmakeupToCart(makeupId);
+        // 2. Update the cart state with the updated cart received from the server
+        setCart(updatedCart);
+    }
+
+    async function handleChangeQty(makeupId, newQty) {
+        const updatedCart = await ordersAPI.setmakeupQtyInCart(makeupId, newQty);
+        setCart(updatedCart);
+    }
+
+    async function handleCheckout() {
+        await ordersAPI.checkout();
+        navigate('/orders');
+    }
+
 
     return (
-        <>
-            <h1>
-                OrderPage
-            </h1>
-        </>
+        <main className="OrderPage">
+            <aside>
+                <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
+                <UserLogOut user={user} setUser={setUser} />
+            </aside>
+            <MenuList
+                makeupItems={makeupItems}
+                handleAddToOrder={handleAddToOrder}
+            />
+            <OrderDetail
+                order={cart}
+                handleChangeQty={handleChangeQty}
+                handleCheckout={handleCheckout}
+            />
+        </main>
     );
 }
