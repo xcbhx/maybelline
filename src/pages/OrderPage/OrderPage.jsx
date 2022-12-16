@@ -9,14 +9,14 @@ import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 
 export default function OrderPage({ user, setUser }) {
-    const [makeupItems, setMakeupItems] = useState([]);
+    const [menuMakeup, setMenuMakeup] = useState([]);
     const [cart, setCart] = useState(null);
     const navigate = useNavigate();
 
     useEffect(function () {
         async function getMakeup() {
             const makeup = await makeupAPI.getAllMakeup();
-            setMakeupItems(makeup);
+            setMenuMakeup(makeup);
         }
         getMakeup();
 
@@ -53,7 +53,7 @@ export default function OrderPage({ user, setUser }) {
                 <UserLogOut user={user} setUser={setUser} />
             </aside>
             <MenuList
-                // makeupItems={makeupItems}
+                // menuMakeup={menuMakeup}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail
