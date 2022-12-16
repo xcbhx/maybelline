@@ -22,8 +22,8 @@ const ensureLoggedIn = require('./config/ensureLoggedIn');
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/orders', require('./routes/api/orders'));
-app.use('/api/makeup', require('./routes/api/makeup'));
+app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
+app.use('/api/makeup', ensureLoggedIn, require('./routes/api/makeup'));
 
 
 // The following "catch all" route (note the *) is necessary
