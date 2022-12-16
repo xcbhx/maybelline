@@ -5,7 +5,6 @@ import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import OrderPage from '../OrderPage/OrderPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import EyesPage from '../EyesPage/EyesPage';  
 import FacePage from '../FacePage/FacePage';
@@ -29,7 +28,7 @@ export default function App() {
             <Route path="/face" element={<FacePage />} />
             <Route path="/eyes" element={<EyesPage />} />
             <Route path="/lips" element={<LipsPage />} />
-            <Route path="/orders/new" element={<NewOrderPage />} />
+            {/* <Route path="/orders/new" element={<NewOrderPage />} /> */}
             <Route path="/orders" element={<OrderHistoryPage />} />
           </Routes>
           </>
