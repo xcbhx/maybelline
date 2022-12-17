@@ -6,9 +6,6 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import OrderPage from '../OrderPage/OrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
-import EyesPage from '../EyesPage/EyesPage';  
-import FacePage from '../FacePage/FacePage';
-import LipsPage from '../LipsPage/LipsPage';
 
 
 
@@ -25,9 +22,6 @@ export default function App() {
             {/* Route compenents in here */}
           <Routes>
             <Route path="/orders/new" element={<OrderPage user={user} setUser={setUser} />} />
-            <Route path="/face" element={<FacePage />} />
-            <Route path="/eyes" element={<EyesPage />} />
-            <Route path="/lips" element={<LipsPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>

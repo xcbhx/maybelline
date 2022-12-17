@@ -3,19 +3,19 @@ import * as makeupAPI from '../../utilities/makeup-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import './OrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
-import MenuList from '../../components/MenuList/MenuList';
+import MakeupList from '../../components/MakeupList/MakeupList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 
 
 export default function OrderPage({ user, setUser }) {
-    const [menuMakeup, setMenuMakeup] = useState([]);
+    const [listMakeup, setListMakeup] = useState([]);
     const [cart, setCart] = useState(null);
     const navigate = useNavigate();
 
     useEffect(function () {
         async function getMakeup() {
             const makeup = await makeupAPI.getAllMakeup();
-            setMenuMakeup(makeup);
+            setListMakeup(makeup);
         }
         getMakeup();
 
@@ -50,13 +50,13 @@ export default function OrderPage({ user, setUser }) {
             <aside>
                 <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
             </aside>
-            {menuMakeup.map((data) => {
+            {listMakeup.map((data) => {
                 return (
                     <li key={data.id}>{data.name}</li>
                 )
             })}
-            <MenuList
-                menuMakeup={menuMakeup}
+            <MakeupList
+                listMakeup={listMakeup}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail
