@@ -15,7 +15,7 @@ async function getMakeups() {
                 APIid: makeup.id,
                 name: makeup.name,
                 price: makeup.price,
-                image_link: makeup.image_link,
+                api_featured_image: makeup.api_featured_image,
                 description: makeup.description,
                 rating: makeup.rating,
                 product_type: makeup.product_type,

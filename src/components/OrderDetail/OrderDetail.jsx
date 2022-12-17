@@ -15,8 +15,8 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   );
 
   return (
-    <div className="OrderDetail">
-      <div className="section-heading">
+    <div className="OrderDetailMakeup">
+      <div className="section-headingm">
         {order.isPaid ?
           <span>ORDER <span className="smaller">{order.orderId}</span></span>
           :
@@ -24,7 +24,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
         }
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
-      <div className="line-item-container flex-ctr-ctr flex-col scroll-y">
+      <div className="line-item-container">
         {lineItems.length ?
           <>
             {lineItems}

@@ -10,7 +10,7 @@ const makeupSchema = new Schema({
     price: {
         type: Number
     },
-    image_link: {
+    api_featured_image: {
         type: String
     },
     description: {

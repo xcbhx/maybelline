@@ -46,24 +46,31 @@ export default function OrderPage({ user, setUser }) {
 
 
     return (
-        <main className="OrderPage">
+        <main className="OrderPageMakeup">
             <aside>
-                <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
+                <Link to="/orders" className="btnPreOrders">PREVIOUS ORDERS</Link>
             </aside>
-            {listMakeup.map((data) => {
-                return (
-                    <li key={data.id}>{data.name}</li>
-                )
-            })}
             <MakeupList
                 listMakeup={listMakeup}
                 handleAddToOrder={handleAddToOrder}
-            />
+                />
             <OrderDetail
                 order={cart}
                 handleChangeQty={handleChangeQty}
                 handleCheckout={handleCheckout}
-            />
+                />
+                {listMakeup.map((data) => {
+                    return (
+                        <div>
+                            <ul>
+                        <li key={data.id}>{data.name}</li>
+                        <li key={data.id}>{data.price}</li>
+                        <li key={data.id}>{data.image_link}</li>
+                        <li key={data.id}>{data.product_type}</li>
+                        </ul>
+                        </div>
+                    )
+                })}
         </main>
     );
 }
