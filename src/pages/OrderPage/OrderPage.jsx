@@ -50,6 +50,11 @@ export default function OrderPage({ user, setUser }) {
             <aside>
                 <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
             </aside>
+            {menuMakeup.map((data) => {
+                return (
+                    <li key={data.id}>{data.name}</li>
+                )
+            })}
             <MenuList
                 menuMakeup={menuMakeup}
                 handleAddToOrder={handleAddToOrder}
