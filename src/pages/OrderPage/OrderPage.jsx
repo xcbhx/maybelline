@@ -5,7 +5,6 @@ import './OrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import MenuList from '../../components/MenuList/MenuList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
-import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 
 export default function OrderPage({ user, setUser }) {
@@ -50,10 +49,9 @@ export default function OrderPage({ user, setUser }) {
         <main className="OrderPage">
             <aside>
                 <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-                <UserLogOut user={user} setUser={setUser} />
             </aside>
             <MenuList
-                // menuMakeup={menuMakeup}
+                menuMakeup={menuMakeup}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail

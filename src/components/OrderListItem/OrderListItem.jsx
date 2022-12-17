@@ -12,7 +12,7 @@ export default function OrderListItem({ order, activeOrder, setActiveOrder }) {
       </div>
       <div className="align-rt">
         <div>${order.orderTotal.toFixed(2)}</div>
-        <div className="smaller">{order.orderQty} Item{order.orderQty > 1 ? 's' : ''}</div>
+        <div className="smaller">{order.orderQty} Makeup{order.orderQty > 1 ? 's' : ''}</div>
       </div>
     </div>
   );
