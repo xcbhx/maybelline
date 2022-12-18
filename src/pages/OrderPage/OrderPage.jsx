@@ -19,7 +19,7 @@ export default function OrderPage() {
             const makeups = await makeupAPI.getAllMakeup();
             categoriesRef.current = [...new Set(makeups.map(makeup => makeup.category.name))];
             setListMakeup(makeups);
-            setActiveCat(categoriesRef);
+            setActiveCat(categoriesRef.current);
         }
         getMakeups();
 
