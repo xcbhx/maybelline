@@ -2,3 +2,24 @@
     display: flex;
     justify-content: flex-end;
 }
+.productContainer {
+    display: inline-grid;
+    /* grid-template-columns: repeat(4); */
+    /* grid-template-rows: auto auto auto auto; */
+    /* align-content: center; */
+    /* column-gap: 50px;
+    row-gap: 1em; */
+    background-color: azure;
+    border-spacing: 5px 1rem;
+    padding: 30px;
+    width: 350px;
+    height: fit-content;
+    border-style: groove;
+    justify-content: center;
+    border-color: brown;
+    color: rgb(68, 16, 16);
+    box-shadow: 0px 10px 20px 2px rgb(142, 123, 123);
+    border-radius: 20px;
+    margin-top: 20px;
+    list-style: none;
+}

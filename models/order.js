@@ -51,8 +51,8 @@ orderSchema.statics.getCart = function (userId) {
     );
 };
 
-// Instance method for adding an item to a cart (unpaid order)
-orderSchema.methods.addItemToCart = async function (makeupId) {
+// Instance method for adding an makeup to a cart (unpaid order)
+orderSchema.methods.addMakeupToCart = async function (makeupId) {
     // 'this' keyword is bound to the cart (order doc)
     const cart = this;
     // Check if the item already exists in the cart

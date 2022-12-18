@@ -3,7 +3,7 @@ const Order = require('../../models/order');
 
 module.exports = {
   cart,
-  addToCart,
+  addMakeupToCart,
   setMakeupQtyInCart,
   checkout,
   getAllForUser
@@ -22,7 +22,7 @@ async function cart(req, res) {
 }
 
 // Add an Makeup to the cart
-async function addToCart(req, res) {
+async function addMakeupToCart(req, res) {
   const cart = await Order.getCart(req.user._id);
   await cart.addMakeupToCart(req.params.id);
   res.json(cart);
