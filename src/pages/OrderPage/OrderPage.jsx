@@ -17,7 +17,7 @@ export default function OrderPage() {
     useEffect(function () {
         async function getMakeups() {
             const makeups = await makeupAPI.getAllMakeup();
-            categoriesRef.current = [...new Set(makeups.map(makeup => makeup.category.product_type))];
+            categoriesRef.current = [...new Set(makeups.map(makeup => makeup.category.name))];
             setListMakeup(makeups);
             setActiveCat(categoriesRef);
         }
@@ -53,14 +53,14 @@ export default function OrderPage() {
         <main className="OrderPageMakeup">
             <aside>
                 <CategoryList
-                    categories={categoriesRef}
+                    categories={categoriesRef.current}
                     activeCat={activeCat}
                     setActiveCat={setActiveCat}
                 />
                 <Link to="/orders" className="btnPreOrders">PREVIOUS ORDERS</Link>
             </aside>
             <MakeupList
-                listMakeup={listMakeup.filter(makeup => makeup.category.product_type === activeCat)}
+                listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail
@@ -71,3 +71,18 @@ export default function OrderPage() {
         </main >
     );
 }
+// {listMakeup.map((data) => {
+//     return (
+//         <div className='productContainer'>
+//             <form onSubmit={handleAddToOrder}>
+//                 <li key={data.id}>{data.name}</li>
+//                 <li> <img src={`${data.api_featured_image}`} alt="product" /></li>
+//                 <li>${data.price}</li>
+//                 <li key={data.id}>{data.product_type}</li>
+//                 {/* <li key={data.id}>{data.description}</li> */}
+//                 <li key={data.id}>{data.rating}</li>
+//                 <button type="submit">Add To Cart</button>
+//             </form>
+//         </div>
+//     )
+// })}

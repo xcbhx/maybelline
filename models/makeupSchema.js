@@ -20,7 +20,8 @@ const makeupSchema = new Schema({
         type: Number
     },
     product_type: {
-        type: String
+        type: String, 
+        ref: 'Category'
     },
     product_colors: {
         type: [String]

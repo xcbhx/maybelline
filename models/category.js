@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
-  product_type: { type: String}
+  name: { type: String}
 }, {
   timestamps: true
 });
