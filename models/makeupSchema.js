@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
 const makeupSchema = new Schema({
@@ -8,23 +9,22 @@ const makeupSchema = new Schema({
         type: String,
     },
     price: {
-        type: Number
+        type: Number,
     },
     api_featured_image: {
-        type: String
+        type: String,
     },
     description: {
-        type: String
+        type: String,
     },
     rating: {
-        type: Number
+        type: Number,
     },
     product_type: {
-        type: String, 
-        ref: 'Category'
+        type: String,
     },
     product_colors: {
-        type: [String]
+        type: [String],
     }
 });
 

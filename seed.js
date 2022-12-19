@@ -1,23 +1,9 @@
 require('dotenv').config();
 require('./config/database');
 
-const Category = require('./models/category');
 const Makeup = require('./models/makeup');
 
-(async function() {
-    await Category.deleteMany({});
-    const categories = await Category.create([
-        {name: 'Foundation'},
-        {name: 'Eyeshadow'},
-        {name: 'Eyeliner'},
-        {name: 'Nail_polish'},
-        {name: 'Lipstick'},
-        {name: 'Mascara'},
-        {name: 'Bronzer'},
-        {name: 'Blush'},
-        {name: 'Lip_Liner'},
-    ]);
-
+async function getMakeups() {
     await Makeup.deleteMany({});
     const makeupData = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`).then(res => res.json());
     try {
@@ -33,14 +19,16 @@ const Makeup = require('./models/makeup');
                 description: makeup.description,
                 rating: makeup.rating,
                 product_type: makeup.product_type,
-                product_colors: colors,
+                product_colors: colors
             })
             console.log(m);
         }
     } catch (err) {
         console.log(err);
     }
-    
     console.log('SEEDED');
+}
+
+getMakeups().then(function () {
     process.exit();
-})();
+});

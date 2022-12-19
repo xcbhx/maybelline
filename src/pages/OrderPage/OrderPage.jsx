@@ -1,25 +1,21 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import * as makeupAPI from '../../utilities/makeup-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import './OrderPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 import MakeupList from '../../components/MakeupList/MakeupList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
-import CategoryList from '../../components/CategoryList/CategoryList';
+
 
 export default function OrderPage() {
     const [listMakeup, setListMakeup] = useState([]);
-    const [activeCat, setActiveCat] = useState('');
     const [cart, setCart] = useState(null);
-    const categoriesRef = useRef([]);
     const navigate = useNavigate();
 
     useEffect(function () {
         async function getMakeups() {
             const makeups = await makeupAPI.getAllMakeup();
-            categoriesRef.current = [...new Set(makeups.map(makeup => makeup.category.name))];
             setListMakeup(makeups);
-            setActiveCat(categoriesRef.current);
         }
         getMakeups();
 
@@ -52,15 +48,10 @@ export default function OrderPage() {
     return (
         <main className="OrderPageMakeup">
             <aside>
-                <CategoryList
-                    categories={categoriesRef.current}
-                    activeCat={activeCat}
-                    setActiveCat={setActiveCat}
-                />
                 <Link to="/orders" className="btnPreOrders">PREVIOUS ORDERS</Link>
             </aside>
             <MakeupList
-                listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
+                listMakeup={listMakeup}
                 handleAddToOrder={handleAddToOrder}
             />
             <OrderDetail

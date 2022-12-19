@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const makeupCtrl = require('../../controllers/api/makeup');
-const ensureLoggedIn = require('../../config/ensureLoggedIn');
+// const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 //GET /api/makeup
 router.get('/', makeupCtrl.getAllMakeup);
