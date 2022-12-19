@@ -31,6 +31,7 @@ async function addMakeupToCart(req, res) {
 // Updates an makeup's qty in the cart
 async function setMakeupQtyInCart(req, res) {
   const cart = await Order.getCart(req.user._id);
+  console.log('bbbb',cart);
   await cart.setMakeupQty(req.body.makeupId, req.body.newQty);
   res.json(cart);
 }

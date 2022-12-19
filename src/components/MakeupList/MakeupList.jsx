@@ -2,7 +2,7 @@ import './MakeupList.css';
 import MakeupListItem from '../MakeupListItem/MakeupListItem';
 
 export default function MakeupList({ listMakeup, handleAddToOrder }) {
-  const makeups = listMakeup.map(makeup =>
+  const makeups = listMakeup && listMakeup.map(makeup =>
     <MakeupListItem
       key={makeup._id}
       makeup={makeup}

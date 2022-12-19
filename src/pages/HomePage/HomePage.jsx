@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 import * as makeupAPI from '../../utilities/makeup-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import './HomePage.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MakeupList from '../../components/MakeupList/MakeupList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 // import CategoryList from '../../components/CategoryList/CategoryList';
 
 
-export default function HomePage({ cart, setCart}) {
+export default function HomePage({ cart, setCart }) {
     const [listMakeup, setListMakeup] = useState([]);
     // const [activeCat, setActiveCat] = useState('');
     // const categoriesRef = useRef([]);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     useEffect(function () {
         async function getMakeups() {
@@ -40,16 +40,6 @@ export default function HomePage({ cart, setCart}) {
         setCart(updatedCart);
     }
 
-    async function handleChangeQty(makeupId, newQty) {
-        const updatedCart = await ordersAPI.setMakeupQtyInCart(makeupId, newQty);
-        setCart(updatedCart);
-    }
-
-    async function handleCheckout() {
-        await ordersAPI.checkout();
-        navigate('/orders');
-    }
-
 
     return (
         <main className="OrderPageMakeup">
@@ -65,12 +55,12 @@ export default function HomePage({ cart, setCart}) {
                 // listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
                 handleAddToOrder={handleAddToOrder}
                 listMakeup={listMakeup}
-                />
-            <OrderDetail
+                /> 
+            {/* <OrderDetail
                 order={cart}
                 handleChangeQty={handleChangeQty}
                 handleCheckout={handleCheckout}
-                />
+                /> */}
         </main >
     );
 }

@@ -71,8 +71,8 @@ orderSchema.methods.addMakeupToCart = async function (makeupId) {
     return cart.save();
 };
 
-// Instance method to set an item's qty in the cart
-orderSchema.methods.setItemQty = function (makeupId, newQty) {
+// Instance method to set an makeup's qty in the cart
+orderSchema.methods.setMakeupQty = function (makeupId, newQty) {
     // this keyword is bound to the cart (order doc)
     const cart = this;
     // Find the line item in the cart for the menu item
