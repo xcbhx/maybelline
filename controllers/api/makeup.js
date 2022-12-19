@@ -1,11 +1,11 @@
 const Makeup = require('../../models/makeup');
 
 module.exports = {
-    getAllMakeup,
+    index,
     show
 };
 
-async function getAllMakeup(req, res) {
+async function index(req, res) {
     const makeups= await Makeup.find({});
     res.json(makeups);
     console.log(makeups);

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const makeupSchema = require('./makeupSchema');
+require('./category');
 
 
 

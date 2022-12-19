@@ -1,11 +1,11 @@
 import './MakeupList.css';
 import MakeupListItem from '../MakeupListItem/MakeupListItem';
 
-export default function MakeupList({ makeupList, handleAddToOrder }) {
-  const makeups = makeupList && makeupList.map(makeup =>
+export default function MakeupList({ listMakeup, handleAddToOrder }) {
+  const makeups = listMakeup.map(makeup =>
     <MakeupListItem
       key={makeup._id}
-      makeupList={makeup}
+      makeup={makeup}
       handleAddToOrder={handleAddToOrder}
     />
 
@@ -15,11 +15,6 @@ export default function MakeupList({ makeupList, handleAddToOrder }) {
       <main className="MakeupList">
         {makeups}
       </main>
-      {/* {makeup.map((data) => {
-        return (
-          <li key={data.id}>{data.name}</li>
-        )
-      })} */}
     </>
   );
 }

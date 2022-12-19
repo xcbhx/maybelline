@@ -4,7 +4,7 @@ const makeupCtrl = require('../../controllers/api/makeup');
 // const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 //GET /api/makeup
-router.get('/', makeupCtrl.getAllMakeup);
+router.get('/', makeupCtrl.index);
 //GET /api/makeup/:id
 router.get('/:id', makeupCtrl.show);
 

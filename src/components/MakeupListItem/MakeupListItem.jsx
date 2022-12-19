@@ -1,12 +1,12 @@
 import './MakeupListItem.css';
 
-export default function MakeupListItem({ makeupItem, handleAddToOrder }) {
+export default function MakeupListItem({ makeup, handleAddToOrder }) {
   return (
     <div className="MakeupListItem">
-      <div className="name">{makeupItem.name}</div>
+      <div className="name">{makeup.name}</div>
       <div className="buy">
-        <span>${makeupItem.price.toFixed(2)}</span>
-        <button className="btn-sm" onClick={() => handleAddToOrder(makeupItem._id)}>
+        <span>${makeup.price.toFixed(2)}</span>
+        <button className="btn-sm" onClick={() => handleAddToOrder(makeup._id)}>
           ADD
         </button>
       </div>

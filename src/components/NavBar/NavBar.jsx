@@ -13,8 +13,11 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <h1 className="maybellineNav">MAYBELLINE</h1>
       <span>Welcome, {user.name}</span>
+      <Link to="">Homepage</Link>
       &nbsp; | &nbsp;
-      <Link to="/">Cart</Link>
+      <Link to="/cart">Cart</Link>
+      &nbsp; | &nbsp;
+      <Link to="/orders">Orders</Link>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );

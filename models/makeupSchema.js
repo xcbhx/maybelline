@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const Schema = require('mongoose').Schema;
 
 const makeupSchema = new Schema({
@@ -20,8 +20,10 @@ const makeupSchema = new Schema({
     rating: {
         type: Number,
     },
+    type: String,
     product_type: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
     },
     product_colors: {
         type: [String],
