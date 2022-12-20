@@ -2,31 +2,32 @@
 :root {
   --white: #FFFFFF;
   --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
+  --tan-2: #c3bab2;
   --tan-3: #793f0d;
   --red: #812727;
   --text-light: #2e1a0c;
-  --text-dark: #302c29;
+  --text-dark: #49280e;
 }
 
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing: border-box;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url(/public/images/AdobeStock_225355311.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 2vmin;
-  height: 100vh;
-}
+  sans-serif; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  /* background-image: url(/public/images/AdobeStock_225355311.jpeg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* padding: 2vmin; */
+  /* height: 100vh; */
+  /* position: fixed; */
+/* } */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -37,37 +38,37 @@ code {
   height: 100%;
 }
 
-.align-ctr {
+/* .align-ctr {
   text-align: center;
-}
+} */
 
-.align-rt {
+/* .align-rt {
   text-align: right;
-}
+} */
 
-.smaller {
+/* .smaller {
   font-size: smaller;
-}
+} */
 
-.flex-ctr-ctr {
+/* .flex-ctr-ctr {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.flex-col {
+/* .flex-col {
   flex-direction: column;
-}
+} */
 
-.flex-j-end {
+/* .flex-j-end {
   justify-content: flex-end;
-}
+} */
 
-.scroll-y {
+/* .scroll-y {
   overflow-y: scroll;
-}
+} */
 
-.section-heading {
+/* .section-heading {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -78,7 +79,7 @@ code {
   padding: .6vmin;
   text-align: center;
   font-size: 2vmin;
-}
+} */
 
 .form-container {
   padding: 3vmin;
@@ -88,8 +89,9 @@ code {
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--text-dark);
   text-align: center;
+  font-weight: 900;
 }
 
 form {
@@ -116,7 +118,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--tan-3);
 }
 
 button, a.button {
@@ -130,7 +132,7 @@ button, a.button {
   text-align: center;
   border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
-  outline: none;
+  outline-style: double;
   cursor: pointer;
 }
 
@@ -153,7 +155,3 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
-/* main {
-  background-image: url(/public/images/makeup.jpeg);
-
-} */

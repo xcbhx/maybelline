@@ -56,26 +56,7 @@ export default function HomePage({ cart, setCart }) {
                 handleAddToOrder={handleAddToOrder}
                 listMakeup={listMakeup}
                 /> 
-            {/* <OrderDetail
-                order={cart}
-                handleChangeQty={handleChangeQty}
-                handleCheckout={handleCheckout}
-                /> */}
+    
         </main >
     );
 }
-// {listMakeup.map((data) => {
-//     return (
-//         <div className='productContainer'>
-//             <form onSubmit={handleAddToOrder}>
-//                 <li key={data.id}>{data.name}</li>
-//                 <li key={data.api_featured_image}> <img src={`${data.api_featured_image}`} alt="product" /></li>
-//                 <li key={data.price}>${data.price}</li>
-//                 <li key={data.product_type}>{data.product_type}</li>
-//                 {/* <li>{data.description}</li> */}
-//                 <li key={data.rating}>Rating: {data.rating}</li>
-//                 <button type="submit">Add To Cart</button>
-//             </form>
-//         </div>
-//     )
-// })}

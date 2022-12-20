@@ -2,6 +2,7 @@ import MakeupList from "../../components/MakeupList/MakeupList";
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderDetail from "../../components/OrderDetail/OrderDetail";
 import { useNavigate } from "react-router-dom";
+import './CartPage.css';
 
 export default function CartPage({cart, setCart}) {
     const navigate = useNavigate();

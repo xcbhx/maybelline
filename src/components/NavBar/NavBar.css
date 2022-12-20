@@ -1,4 +1,15 @@
-
-.maybellineNav {
+nav {
+    padding: 30px;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* background-color: rgba(230, 241, 241, 0.346); */
+    font-size: 20px;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+a {
+    color: rgb(244, 241, 241);
+    text-decoration: none;
 }
