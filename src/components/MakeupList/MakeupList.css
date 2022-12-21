@@ -1,0 +1,25 @@
+.MakeupList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productContainer {
+    /* box-sizing: border-box; */
+    display: inline-grid;
+    /* display: flex; */
+     /* flex-wrap: wrap; */
+     /* grid-template-columns: repeat(4, 25vw); */
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto auto auto;
+     /* align-content: center; */
+     /* row-gap: 1em; */
+    /* background-color: rgb(212, 218, 224); */
+    /* border-spacing: 50px 1rem; */
+    /* padding: 20px; */
+    /* line-height: 1em; */
+    /* margin-top: 20px; */
+    /* list-style: none; */
+    gap: 10px;
+    
+}

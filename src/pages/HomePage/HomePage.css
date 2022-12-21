@@ -1,43 +1,22 @@
-.btnPreOrders {
+
+
+
+.product {
     display: flex;
-    justify-content: flex-end;
-}
-
-/* .OrderPageMakeup { */
-    /* background-color: rgb(141, 97, 134); */
-    /* background-image: url(/public/images/background5.jpeg);
-    /* background-repeat: no-repeat; */
-    /* background-repeat: repeat-x; */
-    /* background-repeat: repeat-y; */ 
-
-/* } */
-
-.productContainer {
-    box-sizing: border-box;
-    display: inline-block;
-    /* grid-template-columns: repeat(4); */
-    /* grid-template-rows: auto auto auto auto; */
-    /* align-content: center; */
-    /* row-gap: 1em; */
-    /* background-color: rgb(212, 218, 224); */
-    /* border-spacing: 50px 1rem; */
-    /* padding: 20px; */
-    width: 350px;
-    /* line-height: 1em; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
     border-style: groove;
-    /* border-color: brown; */
-    /* color: rgb(68, 16, 16); */
-    /* box-shadow: 0px 10px 20px 2px rgb(142, 123, 123); */
-    /* border-radius: 20px; */
-    margin-top: 20px;
-    /* list-style: none; */
-    /* column-gap: 50px; */
-    
+    border-color: brown;
+    color: rgb(68, 16, 16);
+    box-shadow: 0px 10px 20px 2px rgb(142, 123, 123);
+    border-radius: 20px;
+
 }
 
-.productImg {
-    width: 120px;
-}
+
 
 .productName {
     color: rgb(117, 12, 22);
@@ -47,4 +26,8 @@
 
 .productPrice {
     font-style: italic;
+}
+
+.pD {
+    font-size: small;
 }

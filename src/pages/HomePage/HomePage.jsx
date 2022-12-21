@@ -43,20 +43,11 @@ export default function HomePage({ cart, setCart }) {
 
     return (
         <main className="OrderPageMakeup">
-            <aside>
-            {/* <CategoryList
-          categories={categoriesRef.current}
-          activeCat={activeCat}
-          setActiveCat={setActiveCat}
-        /> */}
-                <Link to="/orders" className="btnPreOrders">PREVIOUS ORDERS</Link>
-            </aside>
             <MakeupList
                 // listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
                 handleAddToOrder={handleAddToOrder}
                 listMakeup={listMakeup}
-                /> 
-    
+                />
         </main >
     );
 }

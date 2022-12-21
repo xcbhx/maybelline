@@ -21,9 +21,6 @@ export default function OrderHistoryPage({ user, setUser }) {
 
   return (
     <main className="OrderHistoryPageMakeup">
-      <aside>
-        <Link to="/orders/new" className="btnNewOrder">NEW ORDER</Link>
-      </aside>
       {/* Render an OrderList component (needs to be coded) */}
       <OrderList
         orders={orders}

@@ -13,7 +13,7 @@ export default function MakeupList({ listMakeup, handleAddToOrder }) {
   return (
     <>
       <main className="MakeupList">
-        {makeups}
+        <div className="productContainer">{makeups}</div>
       </main>
     </>
   );
