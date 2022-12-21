@@ -1,6 +1,5 @@
 
 
-
 .product {
     display: flex;
     flex-direction: column;
@@ -13,7 +12,6 @@
     color: rgb(68, 16, 16);
     box-shadow: 0px 10px 20px 2px rgb(142, 123, 123);
     border-radius: 20px;
-
 }
 
 

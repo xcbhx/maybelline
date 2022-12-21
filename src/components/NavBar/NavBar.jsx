@@ -10,6 +10,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
+    <>
     <nav>
       <div>Welcome, {user.name}</div>
       &nbsp;  &nbsp;
@@ -20,5 +21,7 @@ export default function NavBar({ user, setUser }) {
       <Link to="/orders">Orders</Link>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
+    <footer>© Ceina Ellison, Inc. 2022</footer>
+    </>
   );
 }
