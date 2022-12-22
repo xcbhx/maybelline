@@ -1,0 +1,26 @@
+.LineItem {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.makeupName {
+    text-align: left;
+    width: 200px;
+    font-size: 20px;
+}
+
+.makeupPrice {
+    text-align: left;
+    font-size: 20px;
+}
+
+.qty {
+    text-align: right;
+    font-size: 20px;
+}
+
+.total {
+    font-size: 20px;
+}

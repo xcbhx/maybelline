@@ -1,0 +1,9 @@
+#orders {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+}

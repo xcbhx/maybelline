@@ -1,4 +1,3 @@
-import './OrderDetail.css';
 import LineItem from '../LineItem/LineItem';
 
 // Used to display the details of any order, including the cart (unpaid order)
@@ -6,7 +5,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   if (!order) return null;
 
   const lineItems = order.lineItems.map(makeup =>
-    <LineItem
+    <LineItem 
       lineItem={makeup}
       isPaid={order.isPaid}
       handleChangeQty={handleChangeQty}
@@ -15,12 +14,12 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   );
 
   return (
-    <div className="OrderDetailMakeup">
-      <div className="section-headingm">
+    <div className="ContainerCart">
+      <div className="section-heading">
         {order.isPaid ?
           <span>ORDER <span className="smaller">{order.orderId}</span></span>
           :
-          <span>NEW ORDER</span>
+          <span>NEW ORDER &nbsp;&nbsp;</span>
         }
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
@@ -30,7 +29,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
             {lineItems}
             <section className="total">
               {order.isPaid ?
-                <span className="right">TOTAL&nbsp;&nbsp;</span>
+                <span className="total">TOTAL&nbsp;&nbsp;</span>
                 :
                 <button
                   className="btn-sm"

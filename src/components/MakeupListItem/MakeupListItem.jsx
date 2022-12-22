@@ -1,6 +1,3 @@
-import './MakeupListItem.css';
-
-
 export default function MakeupListItem({ makeup, handleAddToOrder }) {
   return (
     <div className="productContainer">

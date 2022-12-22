@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './OrderHistoryPage.css';
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
@@ -20,7 +19,7 @@ export default function OrderHistoryPage({ user, setUser }) {
   }, []);
 
   return (
-    <main className="OrderHistoryPageMakeup">
+    <main>
       {/* Render an OrderList component (needs to be coded) */}
       <OrderList
         orders={orders}

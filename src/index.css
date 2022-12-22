@@ -9,26 +9,6 @@
   --text-dark: #49280e;
 }
 
-/* *, *:before, *:after {
-  box-sizing: border-box;
-} */
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif; */
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
-  /* background-image: url(/public/images/AdobeStock_225355311.jpeg); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* padding: 2vmin; */
-  /* height: 100vh; */
-  /* position: fixed; */
-/* } */
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -38,37 +18,24 @@ code {
   height: 100%;
 }
 
-/* .align-ctr {
+.align-ctr {
   text-align: center;
-} */
+}
 
-/* .align-rt {
-  text-align: right;
-} */
-
-/* .smaller {
-  font-size: smaller;
-} */
-
-/* .flex-ctr-ctr {
+.section-heading-Order {
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+  background-color: rgb(165, 99, 42);
+  color: black;
+  border: .1vmin solid var(--tan-3);
+  border-radius: 5vmin;
+  width: 300px;
+  text-align: center;
+  height: 100px;
+}
 
-/* .flex-col {
-  flex-direction: column;
-} */
-
-/* .flex-j-end {
-  justify-content: flex-end;
-} */
-
-/* .scroll-y {
-  overflow-y: scroll;
-} */
-
-/* .section-heading {
+.section-heading {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -78,8 +45,15 @@ code {
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
-  font-size: 2vmin;
-} */
+}
+
+.line-item-container{
+  border: .1vmin solid var(--tan-3);
+  padding: 30px;
+  margin: 30px;
+  background-color: rgb(180, 116, 27);
+  border-radius: 90px;
+}
 
 .form-container {
   padding: 3vmin;
@@ -132,12 +106,12 @@ button, a.button {
   text-align: center;
   border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
-  outline-style: double;
+  outline-style: none;
   cursor: pointer;
 }
 
 button.btn-sm {
-  font-size: 1.5vmin;
+  font-size: 2vmin;
   padding: .6vmin .8vmin;
 }
 

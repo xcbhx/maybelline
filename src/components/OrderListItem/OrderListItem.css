@@ -1,0 +1,7 @@
+.orderId {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 75px;
+    row-gap: 25px;
+    
+}

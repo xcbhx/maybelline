@@ -3,26 +3,29 @@ import './LineItem.css';
 export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
   return (
     <div className="LineItem">
-      <div className="flex-ctr-ctr flex-col">
-        <span className="align-ctr">{lineItem.makeup.name}</span>
-        <span>{lineItem.makeup.price.toFixed(2)}</span>
+      <div className="makeupImg"><img src={`${lineItem.makeup.api_featured_image}`}  alt="product"></img></div>
+      <div className="makeupName">
+        {lineItem.makeup.name}
       </div>
-      <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
-        {!isPaid &&
-          <button
-            className="btn-xs"
-            onClick={() => handleChangeQty(lineItem.makeup._id, lineItem.qty - 1)}
-          >−</button>
-        }
-        <span>{lineItem.qty}</span>
-        {!isPaid &&
-          <button
-            className="btn-xs"
-            onClick={() => handleChangeQty(lineItem.makeup._id, lineItem.qty + 1)}
-          >+</button>
-        }
+      <div className="makeupPrice">
+        {lineItem.makeup.price.toFixed(2)}
       </div>
-      <div className="ext-price">${lineItem.extPrice.toFixed(2)}</div>
-    </div>
+        <div className="qty" style={{ justifyContent: isPaid && 'center' }}>
+          {!isPaid &&
+            <button
+              className="btn-xs"
+              onClick={() => handleChangeQty(lineItem.makeup._id, lineItem.qty - 1)}
+            >−</button>
+          }
+          <span>({lineItem.qty})&nbsp;</span>
+          {!isPaid &&
+            <button
+              className="btn-xs"
+              onClick={() => handleChangeQty(lineItem.makeup._id, lineItem.qty + 1)}
+            >+</button>
+          }
+      ${lineItem.extPrice.toFixed(2)}
+        </div>
+      </div>
   );
 }

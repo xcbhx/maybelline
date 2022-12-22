@@ -4,9 +4,9 @@ import OrderDetail from "../../components/OrderDetail/OrderDetail";
 import { useNavigate } from "react-router-dom";
 import './CartPage.css';
 
-export default function CartPage({cart, setCart}) {
+export default function CartPage({ cart, setCart }) {
     const navigate = useNavigate();
-    
+
     async function handleAddToOrder(makeupId) {
         // 1. Call the addMakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
         console.log('add to order');
@@ -26,17 +26,18 @@ export default function CartPage({cart, setCart}) {
     }
     return (
         <>
-        <MakeupList
-                // listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
-                handleAddToOrder={handleAddToOrder}
+            <div className="CartPage">
+                <MakeupList
+                    // listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
+                    handleAddToOrder={handleAddToOrder}
                 // listMakeup={listMakeup}
                 />
-        <h1>CartPage</h1>
-        <OrderDetail
-                order={cart}
-                handleChangeQty={handleChangeQty}
-                handleCheckout={handleCheckout}
+                <OrderDetail
+                    order={cart}
+                    handleChangeQty={handleChangeQty}
+                    handleCheckout={handleCheckout}
                 />
+            </div>
         </>
     );
 }

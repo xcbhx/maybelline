@@ -11,17 +11,19 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <>
-    <nav>
-      <div>Welcome, {user.name}</div>
-      &nbsp;  &nbsp;
-      <Link to="">Home</Link>
-      &nbsp;  &nbsp;
-      <Link to="/cart">🛍</Link>
-      &nbsp;  &nbsp;
-      <Link to="/orders">Orders</Link>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
-    </nav>
-    <footer>© Ceina Ellison, Inc. 2022</footer>
+      <nav>
+        <div className="welcome">Welcome, {user.name}</div>
+        &nbsp;  &nbsp;
+        <div className="Link">
+          <Link to="">Home</Link>
+          &nbsp;  &nbsp;
+          <Link to="/cart">🛍</Link>
+          &nbsp;  &nbsp;
+          <Link to="/orders">Orders</Link>
+          &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+        </div>
+      </nav>
+      <footer>© Ceina Ellison, Inc. 2022</footer>
     </>
   );
 }

@@ -2,16 +2,28 @@ nav {
     padding: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    /* background-color: rgba(230, 241, 241, 0.346); */
     font-size: 20px;
     letter-spacing: 1px;
     opacity: 1;
+    text-shadow: 2px 2px 2px rgb(18, 17, 17);
+    justify-content: space-around;
+    column-gap: 150px;
 }
 
 a {
     color: rgb(244, 241, 241);
     text-decoration: none;
+    background-color:rgba(169, 67, 67, 0.942);;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.welcome {
+    color: rgb(244, 241, 241);
+    background-color: rgba(169, 67, 67, 0.942);
+    padding: 10px;
+    border-radius: 50px;
+    text-shadow: none;
 }
 
 footer {
