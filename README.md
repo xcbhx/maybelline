@@ -42,5 +42,5 @@ Maybelline makeup provides its clients with exclusive products that bring joy to
 
 ## **Next Steps:** <br>
 [ ] Implement a search functionality.
-
+[ ] Create a category section.
 [ ] Add an arrow that allows users to go back to the top of the home page.
