@@ -8,9 +8,6 @@
 
 .bio {
     font-size: 4vmin;
-    /* display: flex;
-    justify-content: center;
-    flex-wrap: wrap; */
 }
 
 body {
@@ -18,8 +15,6 @@ body {
     font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    /* -webkit-font-smoothing: antialiased; */
-    /* -moz-osx-font-smoothing: grayscale; */
     background-image: url(/public/images/AdobeStock_225355311.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,5 +22,4 @@ body {
     background-attachment: fixed;
     padding: 2vmin;
     height: 100vh;
-    /* position: fixed; */
   }
