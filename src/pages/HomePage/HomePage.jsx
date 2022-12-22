@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import * as makeupAPI from '../../utilities/makeup-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import './HomePage.css';
-import { Link } from 'react-router-dom';
 import MakeupList from '../../components/MakeupList/MakeupList';
-import OrderDetail from '../../components/OrderDetail/OrderDetail';
 // import CategoryList from '../../components/CategoryList/CategoryList';
 
 
