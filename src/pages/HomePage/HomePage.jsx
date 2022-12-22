@@ -33,9 +33,7 @@ export default function HomePage({ cart, setCart }) {
     /*--- Event Handlers ---*/
     async function handleAddToOrder(makeupId) {
         // 1. Call the addMakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
-        console.log('add to order');
         const updatedCart = await ordersAPI.addMakeupToCart(makeupId);
-        console.log(updatedCart);
         // 2. Update the cart state with the updated cart received from the server
         setCart(updatedCart);
     }
@@ -47,7 +45,7 @@ export default function HomePage({ cart, setCart }) {
                 // listMakeup={listMakeup.filter(makeup => makeup.category.name === activeCat)}
                 handleAddToOrder={handleAddToOrder}
                 listMakeup={listMakeup}
-                />
+            />
         </main >
     );
 }

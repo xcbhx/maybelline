@@ -5,7 +5,7 @@ export default function OrderDetail({ order, handleChangeQty, handleCheckout }) 
   if (!order) return null;
 
   const lineItems = order.lineItems.map(makeup =>
-    <LineItem 
+    <LineItem
       lineItem={makeup}
       isPaid={order.isPaid}
       handleChangeQty={handleChangeQty}

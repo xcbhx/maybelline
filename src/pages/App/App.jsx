@@ -18,18 +18,18 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ?
-          <>
+      {user ?
+        <>
           <NavBar user={user} setUser={setUser} />
-            {/* Route compenents in here */}
+          {/* Route compenents in here */}
           <Routes>
             <Route path="/orders" element={<OrderHistoryPage />} />
-            <Route path="/*" element={<HomePage user={user} setUser={setUser} cart={cart} setCart={setCart}/>} />
+            <Route path="/*" element={<HomePage user={user} setUser={setUser} cart={cart} setCart={setCart} />} />
             <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
           </Routes>
-          </>
-          :
-          <AuthPage setUser={setUser} />
+        </>
+        :
+        <AuthPage setUser={setUser} />
       }
     </main>
   );

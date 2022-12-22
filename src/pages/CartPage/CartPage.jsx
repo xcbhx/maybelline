@@ -9,9 +9,7 @@ export default function CartPage({ cart, setCart }) {
 
     async function handleAddToOrder(makeupId) {
         // 1. Call the addMakeupToCart function in ordersAPI, passing to it the makeupId, and assign the resolved promise to a variable named cart.
-        console.log('add to order');
         const updatedCart = await ordersAPI.addMakeupToCart(makeupId);
-        console.log(updatedCart);
         // 2. Update the cart state with the updated cart received from the server
         setCart(updatedCart);
     }

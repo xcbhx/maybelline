@@ -9,7 +9,7 @@ export default function OrderHistoryPage({ user, setUser }) {
   const [orders, setOrders] = useState([]);
   const [activeOrder, setActiveOrder] = useState(null);
 
-  useEffect(function() {
+  useEffect(function () {
     async function getOrders() {
       const orders = await ordersAPI.getAllForUser();
       setActiveOrder(orders[0] || null);
