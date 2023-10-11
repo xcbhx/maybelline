@@ -8,7 +8,7 @@
 
 ## Description 
 
-Maybelline makeup provides its clients with exclusive products that bring joy to their everyday lives by enhancing our client's features with lipstick, mascara, foundation, and so on. As you browse, you will see various products that suit your style. 
+The Maybelline makeup website, a mockup, offers its customers exclusive products designed to enhance their everyday lives. Explore a range of items, including lipstick, mascara, foundation, and more, that perfectly complement your style as you browse the site.
 
 </div>
 
